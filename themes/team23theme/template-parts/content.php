@@ -1,10 +1,10 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying posts.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Team23Theme
+ * @package Humescores
  */
 
 ?>
@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php team23theme_posted_on(); ?>
+			<?php humescores_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -30,18 +30,18 @@
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'team23theme' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'humescores' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'team23theme' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'humescores' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php team23theme_entry_footer(); ?>
+		<?php humescores_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
