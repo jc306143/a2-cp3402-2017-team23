@@ -35,7 +35,7 @@
 
 			<div class="site-info">
 				<div><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'humescores' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'humescores' ), 'WordPress' ); ?></a></div>
-				<div><?php printf( esc_html__( 'Theme: %1$s by %2$s', 'humescores' ), 'humescores', '<a href="https://mor10.com/courses" rel="designer">Morten Rand-Hendriksen</a>' ); ?></div>
+				<div><?php printf( esc_html__( 'Theme: %1$s by %2$s', 'team23theme' ), 'team23theme', '<a href="https://github.com/CP3402-2017-1/a2-cp3402-2017-team23" rel="designer">CP3402 team23</a>' ); ?></div>
 			</div><!-- .site-info -->
 		</div><!-- .site-footer__wrap -->
 	</footer><!-- #colophon -->
