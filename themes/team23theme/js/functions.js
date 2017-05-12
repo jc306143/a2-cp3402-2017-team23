@@ -1,6 +1,7 @@
 (function($){
 	$('figure.wp-caption.aligncenter').removeAttr('style');
 	$('img.aligncenter').wrap('<figure class="centered-image" />');
+<<<<<<< HEAD
 	
 	/*
 	 * Test if inline SVGs are supported.
@@ -15,6 +16,8 @@
 	if ( true === supportsInlineSVG() ) {
 		document.documentElement.className = document.documentElement.className.replace( /(\s*)no-svg(\s*)/, '$1svg$2' );
 	}
+=======
+>>>>>>> f68286663da7f5367baa93a5abd72d61afa52b3e
 })(jQuery);
 
 

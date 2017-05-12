@@ -12,6 +12,7 @@
 	margin: 0 auto;
 }
 
+<<<<<<< HEAD
 /* Single posts */
 @media screen and (min-width: $query__medium) {
 	.single.has-sidebar,
@@ -48,6 +49,31 @@
 			.hentry {
 				justify-content: flex-end;
 			}
+=======
+@media screen and (min-width: $query__medium) {
+	.single {
+		&.has-sidebar {
+
+			.hentry {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+
+				.entry-header {
+					width: 100%;
+					flex: 1 0 100%;
+				}
+
+				.post-content {
+					width: $size__ratio-large;
+				}
+
+				.widget-area {
+					width: $size__ratio-small;
+				}
+			}
+
+>>>>>>> f68286663da7f5367baa93a5abd72d61afa52b3e
 		}
 	}
 }
@@ -73,4 +99,7 @@
 		}
 	}
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f68286663da7f5367baa93a5abd72d61afa52b3e

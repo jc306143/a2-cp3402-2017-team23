@@ -5,6 +5,7 @@
 	color: #fff;
 	background-color: $color__skin;
 	text-align: center;
+<<<<<<< HEAD
 
 	a {
 		font-weight: 700;
@@ -49,6 +50,15 @@
 
 .social-menu {
 	margin: 1em 0;
+=======
+	
+	@media screen and (min-width: $query__small) {
+		padding: 1em 2em;
+	}
+}
+
+.social-menu {
+>>>>>>> f68286663da7f5367baa93a5abd72d61afa52b3e
 	ul {
 		display: flex;
 		justify-content: center;
@@ -56,18 +66,29 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> f68286663da7f5367baa93a5abd72d61afa52b3e
 		a {
 			display: block;
 			padding: .5em 1em;
 			color: white;
 			text-decoration: none;
+<<<<<<< HEAD
 			opacity: .6;
 
 			&:hover,
 			&:focus {
 				text-decoration: underline;
 				opacity: 1;
+=======
+			
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+>>>>>>> f68286663da7f5367baa93a5abd72d61afa52b3e
 			}
 		}
 	}

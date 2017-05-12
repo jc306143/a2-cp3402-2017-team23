@@ -42,12 +42,16 @@
 
 		<div class="entry-content">
 			<?php
+<<<<<<< HEAD
 			$length_setting = get_theme_mod('length_setting');
 			if ( 'excerpt' === $length_setting ) {
 				the_excerpt();
 			} else {
 				the_content();
 			}
+=======
+				the_excerpt();
+>>>>>>> f68286663da7f5367baa93a5abd72d61afa52b3e
 			?>
 		</div><!-- .entry-content -->
 		
