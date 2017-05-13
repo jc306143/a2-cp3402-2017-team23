@@ -4,14 +4,14 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Humescores
+ * @package team23theme
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php humescores_the_category_list(); ?>
+		<?php team23theme_the_category_list(); ?>
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -21,7 +21,7 @@
 
 		if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 		<div class="entry-meta">
-			<?php humescores_posted_on(); ?>
+			<?php team23theme_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -31,7 +31,7 @@
 	if ( has_post_thumbnail() ) { ?>
 	<figure class="featured-image full-bleed">
 		<?php
-		the_post_thumbnail('humescores-full-bleed');
+		the_post_thumbnail('team23theme-full-bleed');
 		?>
 	</figure><!-- .featured-image full-bleed -->
 	<?php } ?>
@@ -42,7 +42,7 @@
 		if ( !is_active_sidebar( 'sidebar-1' ) ) : ?>
 		<div class="post-content__wrap">
 			<div class="entry-meta">
-				<?php humescores_posted_on(); ?>
+				<?php team23theme_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<div class="post-content__body">
 		<?php
@@ -52,19 +52,19 @@
 			<?php
 				the_content( sprintf(
 					/* translators: %s: Name of current post. */
-					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'humescores' ), array( 'span' => array( 'class' => array() ) ) ),
+					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'team23theme' ), array( 'span' => array( 'class' => array() ) ) ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				) );
 
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'humescores' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'team23theme' ),
 					'after'  => '</div>',
 				) );
 			?>
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
-			<?php humescores_entry_footer(); ?>
+			<?php team23theme_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 
 		<?php
@@ -74,7 +74,7 @@
 		<?php endif; ?>
 		
 		<?php
-		humescores_post_navigation();
+		team23theme_post_navigation();
 
 		// If comments are open or we have at least one comment, load up the comment template.
 		if ( comments_open() || get_comments_number() ) :

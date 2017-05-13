@@ -1,8 +1,8 @@
 <?php
 /**
- * Humescores Theme Customizer.
+ * team23theme Theme Customizer.
  *
- * @package Humescores
+ * @package team23theme
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function humescores_customize_register( $wp_customize ) {
+function team23theme_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -33,7 +33,7 @@ function humescores_customize_register( $wp_customize ) {
 			$wp_customize,
 			'theme_bg_color', 
 				array(
-					'label'		=> __( 'Header and footer background color', 'humescores'),
+					'label'		=> __( 'Header and footer background color', 'team23theme'),
 					'section'	=> 'colors',
 					'settings'	=> 'theme_bg_color'
 				)
@@ -56,7 +56,7 @@ function humescores_customize_register( $wp_customize ) {
 		new WP_Customize_Color_Control(
 			$wp_customize,
 			'interactive_color', array(
-				'label'		=> __( 'Interactive color (links etc)', 'humescores' ),
+				'label'		=> __( 'Interactive color (links etc)', 'team23theme' ),
 				'section'	=> 'colors',
 				'settings'	=> 'interactive_color'
 			)
@@ -66,10 +66,10 @@ function humescores_customize_register( $wp_customize ) {
 	// Add option to select index content
 	$wp_customize->add_section( 'theme_options', 
 		array(
-			'title'			=> __( 'Theme Options', 'humescores' ),
+			'title'			=> __( 'Theme Options', 'team23theme' ),
 			'priority'		=> 95,
 			'capability'	=> 'edit_theme_options',
-			'description'	=> __( 'Change how much of a post is displayed on index and archive pages.', 'humescores' )
+			'description'	=> __( 'Change how much of a post is displayed on index and archive pages.', 'team23theme' )
 		)
 	);
 	
@@ -78,35 +78,35 @@ function humescores_customize_register( $wp_customize ) {
 		array(
 			'default'			=> 'excerpt',
 			'type'				=> 'theme_mod',
-			'sanitize_callback' => 'humescores_sanitize_length', // Sanitization function appears further down
+			'sanitize_callback' => 'team23theme_sanitize_length', // Sanitization function appears further down
 			'transport'			=> 'postMessage'
 		)
 	);
 
 	// Add the controls
-	$wp_customize->add_control(	'humescores_length_control',
+	$wp_customize->add_control(	'team23theme_length_control',
 		array(
 			'type'		=> 'radio',
-			'label'		=> __( 'Index/archive displays', 'humescores' ),
+			'label'		=> __( 'Index/archive displays', 'team23theme' ),
 			'section'	=> 'theme_options',
 			'choices'	=> array(
-				'excerpt'		=> __( 'Excerpt (default)', 'humescores' ),
-				'full-content'	=> __( 'Full content', 'humescores' )
+				'excerpt'		=> __( 'Excerpt (default)', 'team23theme' ),
+				'full-content'	=> __( 'Full content', 'team23theme' )
 			),
 			'settings'	=> 'length_setting' // Matches setting ID from above
 		)
 	);
 	
 }
-add_action( 'customize_register', 'humescores_customize_register' );
+add_action( 'customize_register', 'team23theme_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function humescores_customize_preview_js() {
-	wp_enqueue_script( 'humescores_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+function team23theme_customize_preview_js() {
+	wp_enqueue_script( 'team23theme_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
-add_action( 'customize_preview_init', 'humescores_customize_preview_js' );
+add_action( 'customize_preview_init', 'team23theme_customize_preview_js' );
 
 
 /**
@@ -115,7 +115,7 @@ add_action( 'customize_preview_init', 'humescores_customize_preview_js' );
  * apply the default (excerpt).
  */
 
-function humescores_sanitize_length( $value ) {
+function team23theme_sanitize_length( $value ) {
     if ( ! in_array( $value, array( 'excerpt', 'full-content' ) ) ) {
         $value = 'excerpt';
 	}
@@ -123,13 +123,13 @@ function humescores_sanitize_length( $value ) {
 }
 
 
-if ( ! function_exists( 'humescores_header_style' ) ) :
+if ( ! function_exists( 'team23theme_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see humescores_custom_header_setup().
+ * @see team23theme_custom_header_setup().
  */
-function humescores_header_style() {
+function team23theme_header_style() {
 	$header_text_color = get_header_textcolor();
 	$header_bg_color = get_theme_mod( 'theme_bg_color' );
 	$interactive_color = get_theme_mod('interactive_color');

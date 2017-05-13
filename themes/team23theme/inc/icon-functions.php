@@ -10,7 +10,7 @@
 /**
  * Add SVG definitions to the footer.
  */
-function humescores_include_svg_icons() {
+function team23theme_include_svg_icons() {
 	// Define SVG sprite file.
 	$svg_icons = get_parent_theme_file_path( '/images/svg-icons.svg' );
 
@@ -19,7 +19,7 @@ function humescores_include_svg_icons() {
 		require_once( $svg_icons );
 	}
 }
-add_action( 'wp_footer', 'humescores_include_svg_icons', 9999 );
+add_action( 'wp_footer', 'team23theme_include_svg_icons', 9999 );
 
 /**
  * Return SVG markup.
@@ -33,15 +33,15 @@ add_action( 'wp_footer', 'humescores_include_svg_icons', 9999 );
  * }
  * @return string SVG markup.
  */
-function humescores_get_svg( $args = array() ) {
+function team23theme_get_svg( $args = array() ) {
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
-		return __( 'Please define default parameters in the form of an array.', 'humescores' );
+		return __( 'Please define default parameters in the form of an array.', 'team23theme' );
 	}
 
 	// Define an icon.
 	if ( false === array_key_exists( 'icon', $args ) ) {
-		return __( 'Please define an SVG icon filename.', 'humescores' );
+		return __( 'Please define an SVG icon filename.', 'team23theme' );
 	}
 
 	// Set defaults.
@@ -66,9 +66,9 @@ function humescores_get_svg( $args = array() ) {
 	 *
 	 * However, child themes can use the title and description to add information to non-decorative SVG icons to improve accessibility.
 	 *
-	 * Example 1 with title: <?php echo humescores_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ) ) ); ?>
+	 * Example 1 with title: <?php echo team23theme_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ) ) ); ?>
 	 *
-	 * Example 2 with title and description: <?php echo humescores_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ), 'desc' => __( 'This is the description', 'textdomain' ) ) ); ?>
+	 * Example 2 with title and description: <?php echo team23theme_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ), 'desc' => __( 'This is the description', 'textdomain' ) ) ); ?>
 	 *
 	 * See https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/.
 	 */
@@ -123,22 +123,22 @@ function humescores_get_svg( $args = array() ) {
  * @param  array   $args        wp_nav_menu() arguments.
  * @return string  $item_output The menu item output with social icon.
  */
-function humescores_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
+function team23theme_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	// Get supported social icons.
-	$social_icons = humescores_social_links_icons();
+	$social_icons = team23theme_social_links_icons();
 
 	// Change SVG icon inside social links menu if there is supported URL.
 	if ( 'social' === $args->theme_location ) {
 		foreach ( $social_icons as $attr => $value ) {
 			if ( false !== strpos( $item_output, $attr ) ) {
-				$item_output = str_replace( $args->link_after, '</span>' . humescores_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
+				$item_output = str_replace( $args->link_after, '</span>' . team23theme_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
 			}
 		}
 	}
 
 	return $item_output;
 }
-add_filter( 'walker_nav_menu_start_el', 'humescores_nav_menu_social_icons', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'team23theme_nav_menu_social_icons', 10, 4 );
 
 
 /**
@@ -146,7 +146,7 @@ add_filter( 'walker_nav_menu_start_el', 'humescores_nav_menu_social_icons', 10, 
  *
  * @return array $social_links_icons
  */
-function humescores_social_links_icons() {
+function team23theme_social_links_icons() {
 	// Supported social links icons.
 	$social_links_icons = array(
 		'behance.net'     => 'behance',
@@ -193,5 +193,5 @@ function humescores_social_links_icons() {
 	 *
 	 * @param array $social_links_icons
 	 */
-	return apply_filters( 'humescores_social_links_icons', $social_links_icons );
+	return apply_filters( 'team23theme_social_links_icons', $social_links_icons );
 }

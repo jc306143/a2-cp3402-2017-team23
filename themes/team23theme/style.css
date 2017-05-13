@@ -436,8 +436,6 @@ dd {
 img {
 	height: auto;
 	/* Make sure images are scaled correctly. */
-	max-width: 100%;
-	/* Adhere to container width. */
 }
 
 figure {
@@ -884,22 +882,17 @@ a:hover, a:active {
 	}
 	.single.has-sidebar .hentry .post-content,
 	.page .hentry .post-content {
-		width: 60%;
+		width: 75%;
 	}
 	.single.has-sidebar .hentry .widget-area,
 	.page .hentry .widget-area {
-		width: 30%;
+		width: 20%;
 	}
-	.page.has-page-sidebar .hentry {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: reverse;
-		    -ms-flex-direction: row-reverse;
-		        flex-direction: row-reverse;
+	.page:not(.has-page-sidebar) .hentry .post-content {
+		width: 100%;
 	}
-	.page:not(.has-page-sidebar) .hentry {
-		-webkit-box-pack: end;
-		    -ms-flex-pack: end;
-		        justify-content: flex-end;
+	.page:not(.has-page-sidebar) .hentry .entry-meta {
+		width: 0;
 	}
 }
 
@@ -913,10 +906,10 @@ a:hover, a:active {
 		        justify-content: space-between;
 	}
 	.single.no-sidebar .post-content__wrap .entry-meta {
-		width: 20%;
+		width: 10%;
 	}
 	.single.no-sidebar .post-content__wrap .post-content__body {
-		width: 70%;
+		width: 100%;
 	}
 }
 
@@ -955,10 +948,10 @@ a:hover, a:active {
 		        flex: 1 0 100%;
 	}
 	.archive-view.has-sidebar .content-area {
-		width: 60%;
+		width: 100%;
 	}
 	.archive-view.has-sidebar .widget-area {
-		width: 30%;
+		width: 0;
 	}
 }
 
@@ -1085,7 +1078,7 @@ a:hover, a:active {
 
 .custom-logo-link img {
 	display: block;
-	height: 65px;
+	height: 75px;
 	width: auto;
 }
 

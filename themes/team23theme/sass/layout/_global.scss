@@ -41,12 +41,18 @@
 	.page {
 		&.has-page-sidebar {
 			.hentry {
-				flex-direction: row-reverse;
+				//justify-content: flex-end;
 			}
 		}
 		&:not(.has-page-sidebar) {
 			.hentry {
-				justify-content: flex-end;
+				//flex-direction: row-reverse;
+				.post-content {
+					width: 100%;
+				}
+				.entry-meta {
+					width: 0;
+				}
 			}
 		}
 	}
@@ -62,11 +68,11 @@
 				justify-content: space-between;
 
 				.entry-meta {
-					width: 20%;
+					width: 10%;
 				}
 
 				.post-content__body {
-					width: 70%;
+					width: 100%;
 				}
 			}
 
