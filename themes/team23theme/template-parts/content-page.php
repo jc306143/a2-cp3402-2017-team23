@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Humescores
+ * @package team23theme
  */
 
 ?>
@@ -18,7 +18,7 @@
 	if ( has_post_thumbnail() ) { ?>
 	<figure class="featured-image full-bleed">
 		<?php
-		the_post_thumbnail('humescores-full-bleed');
+		the_post_thumbnail('team23theme-full-bleed');
 		?>
 	</figure><!-- .featured-image full-bleed -->
 	<?php } ?>
@@ -29,7 +29,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'humescores' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'team23theme' ),
 				'after'  => '</div>',
 			) );
 		?>

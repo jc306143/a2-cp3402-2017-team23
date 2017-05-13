@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Humescores
+ * @package team23theme
  */
 
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
 if ( have_posts() ) : ?>
 
 	<header class="page-header">
-		<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'humescores' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'team23theme' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 	</header><!-- .page-header -->
 
 <?php
@@ -41,9 +41,9 @@ endif; ?>
 		endwhile;
 
 		the_posts_pagination( array(
-			'prev_text' => humescores_get_svg( array( 'icon' => 'arrow-long-left', 'fallback' => true ) ) . __( 'Newer', 'humescores' ),
-			'next_text' => __( 'Older', 'humescores' ) . humescores_get_svg( array( 'icon' => 'arrow-long-right' , 'fallback' => true ) ),
-			'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ', 'humescores' ) . '</span>',
+			'prev_text' => team23theme_get_svg( array( 'icon' => 'arrow-long-left', 'fallback' => true ) ) . __( 'Newer', 'team23theme' ),
+			'next_text' => __( 'Older', 'team23theme' ) . team23theme_get_svg( array( 'icon' => 'arrow-long-right' , 'fallback' => true ) ),
+			'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ', 'team23theme' ) . '</span>',
 		));
 
 		?>

@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Humescores
+ * @package team23theme
  */
 
 get_header(); ?>
@@ -42,9 +42,9 @@ get_header(); ?>
 			endwhile;
 
 			the_posts_pagination( array(
-				'prev_text' => humescores_get_svg( array( 'icon' => 'arrow-long-left', 'fallback' => true ) ) . __( 'Newer', 'humescores' ),
-				'next_text' => __( 'Older', 'humescores' ) . humescores_get_svg( array( 'icon' => 'arrow-long-right' , 'fallback' => true ) ),
-				'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ', 'humescores' ) . '</span>',
+				'prev_text' => team23theme_get_svg( array( 'icon' => 'arrow-long-left', 'fallback' => true ) ) . __( 'Newer', 'team23theme' ),
+				'next_text' => __( 'Older', 'team23theme' ) . team23theme_get_svg( array( 'icon' => 'arrow-long-right' , 'fallback' => true ) ),
+				'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ', 'team23theme' ) . '</span>',
 			));
 
 		?>

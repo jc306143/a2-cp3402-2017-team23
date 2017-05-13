@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Humescores
+ * @package team23theme
  */
 
 ?>
@@ -27,14 +27,14 @@
 						'menu_class'     => 'social-links-menu',
 						'depth'          => 1,
 						'link_before'    => '<span class="screen-reader-text">',
-						'link_after'     => '</span>' . humescores_get_svg( array( 'icon' => 'chain' ) ),
+						'link_after'     => '</span>' . team23theme_get_svg( array( 'icon' => 'chain' ) ),
 					) );
 				?>
 			</nav><!-- .social-menu -->
 			<?php } ?>
 
 			<div class="site-info">
-				<div><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'humescores' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'humescores' ), 'WordPress' ); ?></a></div>
+				<div><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'team23theme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'team23theme' ), 'WordPress' ); ?></a></div>
 				<div><?php printf( esc_html__( 'Theme: %1$s by %2$s', 'team23theme' ), 'team23theme', '<a href="https://github.com/CP3402-2017-1/a2-cp3402-2017-team23" rel="designer">CP3402 team23</a>' ); ?></div>
 			</div><!-- .site-info -->
 		</div><!-- .site-footer__wrap -->

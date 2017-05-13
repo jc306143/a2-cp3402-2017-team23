@@ -1,4 +1,4 @@
-/* global humescoresScreenReaderText */
+/* global team23themeScreenReaderText */
 /**
  * Theme functions file.
  *
@@ -13,7 +13,7 @@
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
 			.append( $( '<span />', { 'class': 'dropdown-symbol', text: '+' }) )
-			.append( $( '<span />', { 'class': 'screen-reader-text', text: humescoresScreenReaderText.expand }) );
+			.append( $( '<span />', { 'class': 'screen-reader-text', text: team23themeScreenReaderText.expand }) );
 
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
@@ -29,7 +29,7 @@
 
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 
-			screenReaderSpan.text( screenReaderSpan.text() === humescoresScreenReaderText.expand ? humescoresScreenReaderText.collapse : humescoresScreenReaderText.expand );
+			screenReaderSpan.text( screenReaderSpan.text() === team23themeScreenReaderText.expand ? team23themeScreenReaderText.collapse : team23themeScreenReaderText.expand );
 		});
 	}
 
@@ -50,7 +50,7 @@
 		// Add an initial values for the attribute.
 		menuToggle.add( siteNavigation ).attr( 'aria-expanded', 'false' );
 
-		menuToggle.on( 'click.humescores', function() {
+		menuToggle.on( 'click.team23theme', function() {
 			$( siteNavigation.closest( '.main-navigation' ), this ).toggleClass( 'toggled-on' );
 
 			$( this )
@@ -69,14 +69,14 @@
 		function toggleFocusClassTouchScreen() {
 			if ( 'none' === $( '.menu-toggle' ).css( 'display' ) ) {
 
-				$( document.body ).on( 'touchstart.humescores', function( e ) {
+				$( document.body ).on( 'touchstart.team23theme', function( e ) {
 					if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
 						$( '.main-navigation li' ).removeClass( 'focus' );
 					}
 				});
 
 				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' )
-					.on( 'touchstart.humescores', function( e ) {
+					.on( 'touchstart.team23theme', function( e ) {
 						var el = $( this ).parent( 'li' );
 
 						if ( ! el.hasClass( 'focus' ) ) {
@@ -87,16 +87,16 @@
 					});
 
 			} else {
-				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.humescores' );
+				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.team23theme' );
 			}
 		}
 
 		if ( 'ontouchstart' in window ) {
-			$( window ).on( 'resize.humescores', toggleFocusClassTouchScreen );
+			$( window ).on( 'resize.team23theme', toggleFocusClassTouchScreen );
 			toggleFocusClassTouchScreen();
 		}
 
-		siteNavigation.find( 'a' ).on( 'focus.humescores blur.humescores', function() {
+		siteNavigation.find( 'a' ).on( 'focus.team23theme blur.team23theme', function() {
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		});
 	})();
@@ -124,8 +124,8 @@
 	}
 
 	$( document ).ready( function() {
-		$( window ).on( 'load.humescores', onResizeARIA );
-		$( window ).on( 'resize.humescores', onResizeARIA );
+		$( window ).on( 'load.team23theme', onResizeARIA );
+		$( window ).on( 'resize.team23theme', onResizeARIA );
 	});
 
 })( jQuery );
